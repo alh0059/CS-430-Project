@@ -1,0 +1,64 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  #bannerimage {
+    width: 100%;
+    background-image: url(../Images/homePageBanner.jpg);
+    background-repeat: no-repeat;
+    height: 405px;
+    background-color: #e8ff80;
+    background-position: center;
+    text-align: center;
+  }
+
+  #VCenterText {
+    display: table-cell;
+    width: 100%;
+    height: 405px;
+    padding: 10px;
+    vertical-align: middle;
+  }
+
+
+
+  .button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: #e8ff80; 
+    color: black; 
+    border: 2px solid #000000;
+  }
+  
+  .button1:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .buttonContainer {
+    height: 100px;
+    position: relative;
+  }
+  
+  .buttonCenter {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }

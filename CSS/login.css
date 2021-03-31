@@ -1,0 +1,30 @@
+.bg-cover {
+    background-image: url("../Images/50-Beautiful-and-Minimalist-Presentation-Backgrounds-011.jpg");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+
+.center-me {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.form-signin {
+    padding: 40px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+input{
+    margin-bottom: 10px;
+}
+
+.loginImage {
+    height: 100px; width: 100px;
+    padding-bottom: 10px;
+}
+
