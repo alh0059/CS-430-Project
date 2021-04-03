@@ -35,16 +35,20 @@ if (isset($_POST['prof-submit'])) {
         exit();
     }
     else{
-        $new_name = uniqid('',true).".".$ext;
-        $destination = '../uploads/'.$new_name;
+        // $newPath is the filePath with '../' removed so that file path can be found when loading from profile.
+        //'../' must be in new destination however, because the 'Uploads' folder is nested from view point of upload-helper, and isnt nested from view of profile.
 
+        $new_name = uniqid('',true).".".$ext;
+        $destination = '../Uploads/'.$new_name;
+        $newPath = 'Uploads/'.$new_name;
+        
         $sql = "UPDATE profile SET picpath =?, bio=? WHERE uname =?";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)){
             header("Location: ../profile.php?error=SQLInjection");
             exit();
         }else{
-            mysqli_stmt_bind_param($stmt,"sss",$destination, $bio, $uname); 
+            mysqli_stmt_bind_param($stmt,"sss",$newPath, $bio, $uname); 
             mysqli_stmt_execute($stmt);
             mysqli_stmt_store_result($stmt);
 

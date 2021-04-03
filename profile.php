@@ -8,13 +8,11 @@ require "includes/dbhandler.php";
     if(isset($_SESSION['uid'])){
         $prof_user = $_SESSION['username'];
         $sqlpro = "SELECT * FROM profile WHERE uname = '$prof_user';";
-        $sqlpro2 = "SELECT approved FROM users WHERE uname = '$prof_user';";
+       
         $res = mysqli_query($conn, $sqlpro);
-        $res2 = mysqli_query($conn, $sqlpro2);
-
         $row = mysqli_fetch_array($res);
-        $row2 = mysqli_fetch_array($res2);
-        $photo = $row['picpath'];
+        
+        $photo = $row['picpath'];;
         $approvedStatus = $row['approved'];
         $adminStatus = $row['administrator'];
         ?>

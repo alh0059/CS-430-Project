@@ -3,7 +3,7 @@ require "includes/header.php"
 ?>
 
 <main>
-<link rel="stylesheet" href="css/signup.css">
+<link rel="stylesheet" href="CSS\signup.css">
     <div class="bg-cover">
         <div class="h-100 container center-me">
             <div class="my-auto">
