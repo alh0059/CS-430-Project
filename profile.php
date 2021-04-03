@@ -15,7 +15,8 @@ require "includes/dbhandler.php";
         $row = mysqli_fetch_array($res);
         $row2 = mysqli_fetch_array($res2);
         $photo = $row['picpath'];
-        $approvedStatus = $row2['approved'];
+        $approvedStatus = $row['approved'];
+        $adminStatus = $row['administrator'];
         ?>
 <style>
     .center-me {
@@ -61,6 +62,13 @@ require "includes/dbhandler.php";
 
     <div class="h-100 center-me">
         <div class ="my-auto">
+
+            <?php if($adminStatus = 1) : ?>
+             <h5>Your account has administrator access!</h5>
+             <a href="admin.php"><button>Open Administrator Tools</button></a>
+            <?php else : ?>
+             <h5>My Profile</h5>
+            <?php endif; ?>
             
             <?php if($approvedStatus = 1) : ?>
              <h5>Your account has been approved for posting!</h5>
