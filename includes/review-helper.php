@@ -13,7 +13,7 @@ if(isset($_POST['review-submit'])){
     $productName = $_POST['productName'];
     $picpath = $_POST['picpath'];
    
-    $sql = "INSERT INTO reviews (product_id, uname, title, review_text, rev_date, rating_number, status) VALUES ('$item_id', '$uname', '$title', '$review', '$date', '$rating', 1);";
+    $sql = "INSERT INTO reviews (product_id, uname, title, review_text, rev_date, rating_number, status, productName) VALUES ('$item_id', '$uname', '$title', '$review', '$date', '$rating', 1, '$productName');";
     $stmt = mysqli_stmt_init($conn);
     $result = $conn->query($sql);
     header("Location: ../review.php?id=$item_id&productName=$productName&picpath=$picpath");

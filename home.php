@@ -9,25 +9,48 @@ require 'includes/header.php'
         <div id="bannerimage"></div> 
 
         <div class="container">
+            
+            <div class = "row">
+                <div class="col-md-12">
+                    <h3 style="text-align:center">Already have an account?</h3>
+                    <div class="buttonContainer">
+                        <div class="buttonCenter">
+                                <a href="login.php"><button class="button button1" >Login Now!</button></a>        
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        
             <div class="row">
                     <div class="col-md-12">
                         <h2 style="text-align:center">The One-Stop-Shop for product reviews.</h2>
-                        <h3 style="text-align:center">Post and view reviews from users around the world.</h3>
-                        
                     </div>
-                    
             </div>   
+
+            <div class=row>
+                 <div class="col-md-12"> 
+                     <a href=""> <img src="Images\sampleReview.JPG" class="center" style="max-width: 700px; max-height: 400px;margin-right:400px"></a>  
+                 </div>
+            </div> 
+
+            <div class=row>
+                <div class="col-md-12">  
+                    <a href=""> <img src="Images\sampleReview2.JPG" class="center" style="max-width: 700px; max-height: 400px;margin-left:400px"></a>
+                </div>
+            </div>  
 
             <div class = "row">
                 <div class="col-md-12">
-                       <div class="buttonContainer">
-                                <div class="buttonCenter">
-                                        <a href="signup.php"><button class="button button1" >Sign Up Now!</button></a>    
-                                        <a href="mainGallery.php"><button class="button button1" >Browse Products</button></a>      
-                                </div>
+                <h1 style="text-align:center">Post and view reviews from users around the world.</h1>
+                    <div class="buttonContainer">
+                        <div class="buttonCenter">
+                                <a href="signup.php"><button class="button button1" >Sign Up Now!</button></a>    
+                                <a href="mainGallery.php"><button class="button button1" >Browse Products</button></a>      
                         </div>
+                    </div>
                 </div>
-            </div>              
+            </div>  
+
         </div>
  </div>
         

@@ -2,16 +2,27 @@
 require 'includes/dbhandler.php';
 require 'includes/header.php'; 
 require 'includes/review-helper.php';
+
+$item_id = $_GET['id'];
+$sql = "SELECT * FROM products WHERE pid='$item_id'";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+
+$productDescpription = $row['description'];
 ?>
 
 <main>
-   
+
     <span id="testAvg"></span>
     <div class="container" align="center" style="max-width: 800px">
         <div class="my-auto">
             <div>
-            <h2> <?php echo $_GET['productName']?> </h2>
-            <img src="products/<?php echo $_GET['picpath']?>" style="max-width: 500px; max-height: 500px">
+            <h1> <?php echo $_GET['productName']?></h1>
+            <img src="products/<?php echo $_GET['picpath']?>" style="max-width: 400px; max-height: 400px">
+            </div>
+            <div>
+            <h3 style="text-align:left">Product Description:</h3>
+            <h5><?php echo $productDescpription?> </h5>
             </div>
             <form id="review-form" action="includes/review-helper.php" method="post">
                 <div class="container">
@@ -23,9 +34,9 @@ require 'includes/review-helper.php';
                 </div>  
                 
                 <div class="form-group" style="margin-top: 15px;">
-                    <label class="title-label" for="review-title" style="font-size: 16px; font-weight: bold;">Title</label>
-                    <input type="text" name="review-title" id="review-title" style="width: 100%; margin-bottom: 10px;">
-                    <textarea class="form-control" id="review-text" name="review" cols="50" rows="3" placeholder="Enter your review..."></textarea>
+                    <label class="title-label" for="review-title" style="font-size: 16px; font-weight: bold;">Review Title</label>
+                    <input type="text" name="review-title" id="review-title" style="width: 100%; margin-bottom: 10px;" placeholder="Enter a title for your review...">
+                    <textarea class="form-control" id="review-text" name="review" cols="50" rows="3" placeholder="Write your review here..."></textarea>
                     <input type="hidden" name="rating" id="rating">
                     <input type="hidden" name="item_id" value="<?php echo $_GET['id'];?>">
                     <input type="hidden" name="productName" value="<?php echo $_GET['productName'];?>">

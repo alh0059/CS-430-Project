@@ -61,7 +61,7 @@ require "includes/dbhandler.php";
     <div class="h-100 center-me">
         <div class ="my-auto">
 
-            <?php if($adminStatus = 1) : ?>
+            <?php if($adminStatus == 1) : ?>
              <h5>Your account has administrator access!</h5>
              <a href="admin.php"><button>Open Administrator Tools</button></a>
             <?php else : ?>
@@ -87,7 +87,40 @@ require "includes/dbhandler.php";
                     <button type="submit" name="prof-submit" class="btn btn-outline-success btn-lg btn-block">upload</button>
                 </div>
             </form>
-
+                
+            <?php if($approvedStatus == 1) :  
+                $sql = "SELECT * FROM reviews WHERE uname='$prof_user' LIMIT 20";
+                $result = mysqli_query($conn, $sql);
+                
+                if(mysqli_num_rows($result) > 0){
+                    while($row = mysqli_fetch_assoc($result)){
+                        $uname = $row['uname'];
+                        $prosql = "SELECT picpath from profile WHERE uname = '$uname';";
+                        $res = mysqli_query($conn, $prosql);
+                        $picpath = mysqli_fetch_assoc($res);
+                
+                        echo '
+                        <div class="card mx-auto" style="width: 100%; padding: 5px; margin-bottom: 10px;"> 
+                            <div class="media">
+                            <img class="mr-3" src="'.$picpath['picpath'].'" style="max-width: 75px; max-height: 75px; border-radius: 50%;">
+                                <div class="media-body">
+                                    <p style="text-align:right">'.$row['rev_date'].'</p>
+                                    <h6 style="text-align:right" class="mt-0">'.$row['uname'].'</h6>
+                                    <h5 class="mt-0">'.$row['title'].'</h5>
+                                    <p>'.$row['review_text'].'</p>
+                                    <h6 >'.$row['productName'].'</h6>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        ';
+                    }
+                }
+                else{
+                    echo '<h5 style="text-align: center">No reviews, yet! Browse or request some products & share your thoughts on them. </h5>';
+                }
+                ?> 
+            <?php endif; ?>
         </div>
     </div>  
     
