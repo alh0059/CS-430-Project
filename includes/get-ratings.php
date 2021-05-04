@@ -4,8 +4,8 @@ include 'dbhandler.php';
 
 $id = $_GET['id'];
 
-$sqlAvg = "SELECT AVG(rating_num) AS AVGRATE FROM reviews WHERE item_id='$id' ORDER BY rev_date DESC";
-$sqlCount = "SELECT count(rating_num) AS Total FROM reviews WHERE item_id='$id'";
+$sqlAvg = "SELECT AVG(rating_number) AS AVGRATE FROM reviews WHERE product_id='$id' ORDER BY rev_date DESC";
+$sqlCount = "SELECT count(rating_number) AS Total FROM reviews WHERE product_id='$id'";
 
 $query = mysqli_query($conn, $sqlAvg);
 $row = mysqli_fetch_array($query);

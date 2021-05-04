@@ -43,13 +43,13 @@ session_start();
                            Browse Products
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">   
-                        <a class="dropdown-item" href="mainGallery.php">Click here</a>
-                        <a class="dropdown-item" href="">2</a>
-                        <a class="dropdown-item" href="">3</a>
-                        <a class="dropdown-item" href="">4</a>
+                        <a class="dropdown-item" href="mainGallery.php">Browse</a>
+                        <a class="dropdown-item" href="">Sports</a>
+                        <a class="dropdown-item" href="">Technology</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="">5</a>
-                        <a class="dropdown-item" href="">About Us</a>
+                        <a class="dropdown-item" href="allProducts.php">All Products</a>
+                        <a class="dropdown-item" href="">Popular</a>
+                        <a class="dropdown-item" href="">New</a>
                         </div>
                     </li>
                     <li class="nav-item active">
