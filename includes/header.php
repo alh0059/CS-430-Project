@@ -44,8 +44,8 @@ session_start();
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">   
                         <a class="dropdown-item" href="mainGallery.php">Browse</a>
-                        <a class="dropdown-item" href="">Sports</a>
-                        <a class="dropdown-item" href="">Technology</a>
+                        <a class="dropdown-item" href="sportsProducts.php">Sports</a>
+                        <a class="dropdown-item" href="technologyProducts.php">Technology</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="allProducts.php">All Products</a>
                         <a class="dropdown-item" href="">Popular</a>

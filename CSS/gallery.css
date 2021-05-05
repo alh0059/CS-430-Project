@@ -1,6 +1,10 @@
-.background{
-    height:800px;
-    background-color: #e8ff80; 
+.bg-cover {
+    background-color: #e8ff80;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat; 
 }
 
 h1 {
