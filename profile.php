@@ -61,7 +61,7 @@ require "includes/dbhandler.php";
     <div class="h-100 center-me">
         <div class ="my-auto">
 
-            <?php if($adminStatus == 1) : ?>
+            <?php if($adminStatus = 1) : ?>
              <h5>Your account has administrator access!</h5>
              <a href="admin.php"><button>Open Administrator Tools</button></a>
             <?php else : ?>
